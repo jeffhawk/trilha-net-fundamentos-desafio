@@ -98,5 +98,20 @@ namespace DesafioFundamentos.Models
                 Console.Clear();
             }
         }
+
+        public void CentralizarTexto(string texto)
+        {
+            int windowWidth = Console.WindowWidth;
+            int xPos = (windowWidth - texto.Length) / 2;
+            Console.SetCursorPosition(xPos, Console.CursorTop);
+            Console.WriteLine(texto);
+        }
+
+        public void FillLine(char symbol)
+    {
+        int windowWidth = Console.WindowWidth;
+        string line = new string(symbol, windowWidth);
+        Console.WriteLine(line);
+    }
     }
 }
