@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -22,7 +24,6 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             placa = Console.ReadLine();
             veiculos.Add(placa);
-            Console.WriteLine(placa);
             //implementado
         }
 
@@ -88,6 +89,13 @@ namespace DesafioFundamentos.Models
             else
             {
                 Console.WriteLine("Não há veículos estacionados.");
+            }
+        }
+        public void Limpa()
+        {
+            if (Environment.UserInteractive)
+            {
+                Console.Clear();
             }
         }
     }
